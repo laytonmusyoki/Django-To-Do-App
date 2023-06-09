@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block title %} Register {% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+   
+    <div class="card2">
+        <h2 style="text-align: center;color: #555;">Register</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+        {{users.username}}
+        {{users.email}}
+        {{users.password1.label}}
+        {{users.password1}}
+        {{users.password2.label}}
+        {{users.password2}}
+        <button type="submit" class=" btn btn-outline-success" style="margin-bottom: 20px;">Sign Up</button>
+        {{users.errors}}
+    </form>
+    <p>Already have an account? <a href="{% url 'loginpage' %}">Login</a></p>
+    </div>
+</div>
+{% endblock %}

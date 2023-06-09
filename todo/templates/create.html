@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% block title %} Create {% endblock %}
+
+
+
+{% block content %}
+
+
+
+<div class="card">
+    <h2>Create a todo:</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+    {{users.semester.label}}
+    {{users.semester}}
+    {{users.week.label}}
+    {{users.week}}
+    {{users.ToDo.label}}
+    {{users.ToDo}}
+    {{users.STATUS.label}}
+    {{users.STATUS}}
+<!-- <br>
+<br> -->
+    <button type="submit" class="btn btn-outline-success" style="margin-top: 20px; float: right;">Create a todo</button>
+</form>
+</div>
+
+{% endblock %}

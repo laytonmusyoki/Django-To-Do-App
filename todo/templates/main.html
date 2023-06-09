@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock %} </title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container-fluid dec">
+        <div class="navbar">
+            <div class="logo">
+                <a href="" style="color: #ffffff;font-weight: bold;"><span style="color: gold;"> My</span><span style="color: tomato;">Todo</span><span style="color: orange;">App</span></a>
+            </div>
+            
+            <div class="nav">
+                <ul>
+                    {% if request.user.is_authenticated %}
+                    <li style="font-weight: 600;color: #333;font-size: 20px;">Welcome back <strong style="color: purple;">{{user}}</strong> lets continue </li>
+                    <li><a href="{% url 'logouturl' %}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'loginpage' %}">Login</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    {% endif %}
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

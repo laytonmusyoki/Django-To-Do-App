@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% block title %} Login {% endblock %}
+
+
+{% block content %}
+<div class="container">
+   
+    {% for msg in messages %}
+    <div class="alert alert-{{msg.level_tag}} alert-dismissible fade show  name" role="alert" >
+      <strong> {{msg.message}}</strong>
+      <button type="button" class="btn-close name1" data-bs-dismiss="alert" aria-label="close"></button>
+  </div>
+
+    {% endfor %}
+
+    <div class="card2">
+        <h2 style="text-align: center;color: #555;">Sign In</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+        <input type="text" placeholder="Enter username" name="username">
+        <input type="password" placeholder="Enter password" name="password">
+        <button type="submit" class=" btn btn-outline-success" style="margin-bottom: 20px;">Login</button>
+        {{users.errors}}
+    </form>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+</div>
+{% endblock %}

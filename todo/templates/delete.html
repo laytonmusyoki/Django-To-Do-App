@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block title %} Delete {% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+    <div class="card1">
+        <h5 style="text-align: center;">Are you sure you want to  delete <br> {{data}} ?</h5>
+        <div class="links" style="display: flex;justify-content: space-around; margin-top: 35px;">
+            <form action="{% url 'deleteuser' data.id %}" method="POST">
+                {% csrf_token %}
+            <a href="{% url 'showusers' %}" class="btn btn-warning">Cancel</a>
+            <button type="submit"class="btn btn-success">Confirm</button>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

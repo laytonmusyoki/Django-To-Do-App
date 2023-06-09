@@ -1,0 +1,70 @@
+
+.box{
+    margin: 20px 0;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+}
+.card{
+    width: 700px;
+    height: auto;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    left: 50%;
+    top: 50%;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+h2{
+    color: hsl(0, 0%, 30%);
+}
+input{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+}
+.card1{
+    width: 400px;
+    height: 180px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    left: 50%;
+    top: 50%;
+    padding: 15px 10px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.card2{
+    width: 400px;
+    height: auto;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    left: 50%;
+    top: 50%;
+    padding: 15px 10px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.navbar{
+    display: flex;
+    
+}
+.dec{
+    padding: 0 3%;
+    background: #4f868c;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    display: inline-block;
+    padding-right:20px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+select{
+    width: 100%;
+}
